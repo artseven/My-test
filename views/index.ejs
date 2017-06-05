@@ -27,7 +27,13 @@
     </div>
   </div>
   <div class="inline" id="obj3">
-
+    <% if (option === "none") { %>
+      <% for (i=0; i<input; i++) { %>
+          <div class="items">
+            Item   <%= +i+1 %>
+          </div>
+        <% } %>
+    <%  } %>
     <% if (option === "optionA") { %>
       <% for (i=0; i<input; i++) { %>
           <div class="items">
@@ -42,6 +48,8 @@
           </div>
         <% } %>
     <%  } %>
+
+      <div id="paging"></div>
 
   </div>
 </div>

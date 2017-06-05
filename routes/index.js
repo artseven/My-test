@@ -1,5 +1,6 @@
-const express = require('express');
-const router  = express.Router();
+const express  = require('express');
+const router   = express.Router();
+const paginate = require('express-paginate');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
@@ -16,7 +17,6 @@ router.post('/', (req, res, next) => {
   });
   console.log(req.body.optionSelector);
 
-  console.log(req.body.optionB);
 
 });
 

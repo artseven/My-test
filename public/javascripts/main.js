@@ -1,6 +1,14 @@
 $("#option" ).click(function() {
   $( "#toggle" ).toggle( "slide" );
+  $( "#slide" ).addClass('active');
 });
+
+$(document).click(function(e) {
+  if ($("slide").hasClass('active')) {
+    $( "#toggle" ).toggle( "slide" );
+  }
+});
+
 
 $(function() {
 

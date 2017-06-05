@@ -3,10 +3,11 @@ const path         = require('path');
 const logger       = require('morgan');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
+const paginate     = require('express-paginate');
+const app          = express();
 
-
-const app = express();
-
+// Pagination middleware
+app.use(paginate.middleware(10, 50));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
