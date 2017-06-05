@@ -17,3 +17,11 @@ $(document).click(function(e) {
 });
 
 });
+
+function validateForm() {
+    var x = document.forms['myForm']['quantity'].value;
+    if (x == '') {
+      document.getElementById('quantity-input').style.borderColor = "red";
+        return false;
+    }
+}

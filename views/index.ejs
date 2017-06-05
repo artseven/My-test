@@ -6,7 +6,7 @@
     </button>
 
     <div id="quantity">
-      <form action="/" method="post">
+      <form name="myForm" action="/" method="post" onsubmit="return validateForm()">
       <label for="quantity-input"> Quantity </label>
       <input  id="quantity-input" type="number"
         name="quantity">
@@ -19,13 +19,15 @@
 
       <select id ="selector" name="optionSelector">
         <option value="none">Select A/B</option>
-        <option name="optionA" value="optionA">A<button class="invisible"></button></option>
-        <option name="optionB" value="optionB">B<button class="invisible"></button></option>
+        <option name="optionA" value="optionA">A</option>
+        <option name="optionB" value="optionB">B</option>
       </select>
+      <button class="submit"> Submit</button>
     </form>
     </div>
   </div>
   <div class="inline" id="obj3">
+
     <% if (option === "optionA") { %>
       <% for (i=0; i<input; i++) { %>
           <div class="items">
@@ -40,5 +42,6 @@
           </div>
         <% } %>
     <%  } %>
+
   </div>
 </div>

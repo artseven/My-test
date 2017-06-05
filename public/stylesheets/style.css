@@ -68,3 +68,8 @@ div.inline {
 .invisible {
   display: none;
 }
+
+.submit {
+  margin-top: 5px;
+  margin-left:60px;
+}
