@@ -23,6 +23,12 @@ div.inline {
 
 }
 
+#obj3 {
+  background-color: lightgrey;
+  height: 500px;
+  width: 500px;
+}
+
 #option {
   position: relative;
   top: 50px;
@@ -36,7 +42,25 @@ div.inline {
 }
 
 #toggle {
-  width: 150px;
+  width: 200px;
   height: 500px;
   background: #ccc;
+  display: none;
+}
+
+.items {
+  box-sizing: border-box;
+  border-style: 1px black solid;
+  background: darkgrey;
+  width: 200px;
+  height: 50px;
+  margin: 25px 125px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+#selector {
+  position: relative;
+  margin: 50px ;
+  padding: 5px;
 }
