@@ -6,6 +6,7 @@ const paginate = require('express-paginate');
 router.get('/', (req, res, next) => {
   res.render('index');
   console.log(option);
+
 });
 
 router.post('/', (req, res, next) => {
@@ -16,7 +17,6 @@ router.post('/', (req, res, next) => {
 
   });
   console.log(req.body.optionSelector);
-
 
 });
 
