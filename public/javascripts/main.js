@@ -2,7 +2,6 @@ $("#option" ).click(function() {
   $( "#toggle" ).toggle( "slide" );
 });
 
-
 $(function() {
 
 // Dropdown toggle

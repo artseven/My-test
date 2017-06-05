@@ -1,3 +1,4 @@
+<% var option %>
 <div class='table'>
   <div class="inline" id="obj1">
     <button id="option">
@@ -9,35 +10,35 @@
       <label for="quantity-input"> Quantity </label>
       <input  id="quantity-input" type="number"
         name="quantity">
-      </form>
+
       <br>
     </div>
   </div>
   <div class="inline" id="obj2">
     <div id="toggle">
-      <form action="/" method="post">
+
       <select id ="selector" name="optionSelector">
         <option value="none">Select A/B</option>
-        <option name="optionA" value="optionA">A</option>
-        <option name="optionB" value="optionB">B</option>
+        <option name="optionA" value="optionA">A<button class="invisible"></button></option>
+        <option name="optionB" value="optionB">B<button class="invisible"></button></option>
       </select>
     </form>
     </div>
   </div>
   <div class="inline" id="obj3">
-    <% for (i=0; i<input; i++) { %>
-      <div class="items">
-        Item 1
-      </div>
-      <% } %>
-    <!-- <div class="items">
-      Item 1
-    </div>
-    <div class="items">
-      Item 2
-    </div>
-    <div class="items">
-      Item 3
-    </div> -->
+    <% if (option === "optionA") { %>
+      <% for (i=0; i<input; i++) { %>
+          <div class="items">
+            Item  A <%= +i+1 %>
+          </div>
+        <% } %>
+    <%  } %>
+    <% if (option === "optionB") { %>
+      <% for (i=0; i<input; i++) { %>
+          <div class="items">
+            Item  B <%= +i+1 %>
+          </div>
+        <% } %>
+    <%  } %>
   </div>
 </div>
