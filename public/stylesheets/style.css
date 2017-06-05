@@ -73,3 +73,22 @@ div.inline {
   margin-top: 5px;
   margin-left:60px;
 }
+
+#content p{
+  text-indent:20px;
+  text-align:justify;
+}
+#pagingControls {
+  position: relative;
+  left: -350px;
+  top: 300px;
+}
+#pagingControls ul{
+  display:inline;
+  padding-left:0.5em
+}
+
+#pagingControls li{
+  display:inline;
+  padding:0 0.5em
+}

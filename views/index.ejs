@@ -27,26 +27,40 @@
     </div>
   </div>
   <div class="inline" id="obj3">
+
     <% if (option === "none") { %>
       <% for (i=0; i<input; i++) { %>
+        <div class="z">
           <div class="items">
             Item   <%= +i+1 %>
           </div>
+        </div>
         <% } %>
     <%  } %>
+
+
     <% if (option === "optionA") { %>
       <% for (i=0; i<input; i++) { %>
+        <div class="z">
           <div class="items">
             Item  A <%= +i+1 %>
           </div>
+        </div>
         <% } %>
     <%  } %>
+
+
     <% if (option === "optionB") { %>
       <% for (i=0; i<input; i++) { %>
+        <div class="z">
           <div class="items">
             Item  B <%= +i+1 %>
           </div>
+        </div>
         <% } %>
     <%  } %>
+
+
   </div>
+      <div id="pagingControls"></div>
 </div>

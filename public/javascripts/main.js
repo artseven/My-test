@@ -2,19 +2,6 @@
 //   $( "#toggle" ).toggle( "slide" );
 // });
 
-$(document).ready(function(){
-    $('#option').click(function(event){
-        event.stopPropagation();
-         $("#toggle").toggle("slide");
-    });
-    $("#toggle").on("click", function (event) {
-        event.stopPropagation();
-    });
-});
-
-$(document).on("click", function () {
-    $("#toggle").hide();
-});
 
 
 $(function() {
@@ -47,7 +34,7 @@ $('.submit').click(function(){
     // console.log(json);
 });
 
-//----------- Pagination
+
 
 
 // Quantity-input form validation
@@ -58,3 +45,34 @@ function validateForm() {
         return false;
     }
 }
+
+
+
+//----------- Pagination
+var pager = new Paginator.Pager();
+
+$(document).ready(function() {
+
+pager.paragraphsPerPage = 3; // set amount elements per page
+
+pager.pagingContainer = $('#obj3'); // set of main container
+
+pager.paragraphs = $('div.z', pager.pagingContainer); // set of required containers
+
+pager.showPage(1);
+
+});
+
+$(document).ready(function(){
+    $('#option').click(function(event){
+        event.stopPropagation();
+         $("#toggle").toggle("slide");
+    });
+    $("#toggle").on("click", function (event) {
+        event.stopPropagation();
+    });
+});
+
+$(document).on("click", function () {
+    $("#toggle").hide();
+});
