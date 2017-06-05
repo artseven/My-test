@@ -40,14 +40,16 @@ $('.submit').click(function(){
     // $('selector').each(function(e){
     //     var obj = {};
     //     obj.quantity = $(this).find('input[name=name]').val();
-    //     // obj.url = $(this).find('input[name=url]').val();
     //     json.items.push(obj);
     // });
 
 
     // console.log(json);
 });
+
 //----------- Pagination
+
+
 // Quantity-input form validation
 function validateForm() {
     var x = document.forms['myForm']['quantity'].value;
