@@ -1,12 +1,25 @@
 // $("#option" ).click(function() {
 //   $( "#toggle" ).toggle( "slide" );
 // });
+// Toggling obj2
+$(document).ready(function(){
+    $('#option').click(function(event){
+        event.stopPropagation();
+         $("#toggle").toggle("slide");
+    });
+    $("#toggle").on("click", function (event) {
+        event.stopPropagation();
+    });
+});
+
+$(document).on("click", function () {
+    $("#toggle").hide();
+});
 
 
-
+// Dropdown toggle inside obj2
 $(function() {
 
-// Dropdown toggle
 $('.dropdown-toggle').click(function(){
   $(this).next('.dropdown').toggle();
 });
@@ -21,20 +34,18 @@ $(document).click(function(e) {
 });
 // ---------------JS--------------------
 // Creating JSON to use data among multiple pages
-$('.submit').click(function(){
-    var json = {};
-    json.items = [];
-    // $('selector').each(function(e){
-    //     var obj = {};
-    //     obj.quantity = $(this).find('input[name=name]').val();
-    //     json.items.push(obj);
-    // });
-
-
-    // console.log(json);
-});
-
-
+// $('.submit').click(function(){
+//     var json = {};
+//     json.items = [];
+//     // $('selector').each(function(e){
+//     //     var obj = {};
+//     //     obj.quantity = $(this).find('input[name=name]').val();
+//     //     json.items.push(obj);
+//     // });
+//
+//
+//     // console.log(json);
+// });
 
 
 // Quantity-input form validation
@@ -61,18 +72,4 @@ pager.paragraphs = $('div.z', pager.pagingContainer); // set of required contain
 
 pager.showPage(1);
 
-});
-
-$(document).ready(function(){
-    $('#option').click(function(event){
-        event.stopPropagation();
-         $("#toggle").toggle("slide");
-    });
-    $("#toggle").on("click", function (event) {
-        event.stopPropagation();
-    });
-});
-
-$(document).on("click", function () {
-    $("#toggle").hide();
 });
